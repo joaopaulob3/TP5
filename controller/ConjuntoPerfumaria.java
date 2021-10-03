@@ -1,0 +1,48 @@
+package controller;
+
+import java.util.ArrayList;
+
+import model.Perfumaria;
+
+public class ConjuntoPerfumaria{
+	//Criação do ArrayList de objetos do tipo Perfumaria
+	private static final ArrayList<Perfumaria> listaPerfumes = new ArrayList<>();
+
+	//Método acessor do ArrayList
+	public static ArrayList<Perfumaria> getListaPerfumes(){
+		return listaPerfumes;
+	}
+		
+	//Adicionar o objeto do tipo Perfumaria no ArrayList
+	public static void cadastrarPerfume(Perfumaria perfume) {
+		listaPerfumes.add(perfume);
+	}
+
+	//Deletar o objeto do tipo Perfumaria do ArrayList
+	public static void deletarPerfume(Perfumaria perfume) {
+		listaPerfumes.remove(perfume);
+	}
+	
+	//Pesquisa o objeto do tipo Perfumaria pelo código dentro do ArrayList
+	//e retorna esse objeto. Se o código informado não bater com o de nenhum
+	//objeto, retorna null
+	public static Perfumaria pesquisarPerfume(String codigo) {
+		for (Perfumaria perfume : listaPerfumes) {
+			if (codigo.equals(perfume.getCodigoDoProduto())) {
+				return perfume;
+			}
+		}
+		return null;
+	}
+	
+	//Verifica se há objeto do tipo Perfumaria cadastrado no ArrayList
+	//Se tiver retorna true, senão retorna false
+	public static boolean temPerfume() {
+		if (listaPerfumes.isEmpty()) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+}
