@@ -56,7 +56,7 @@ public class CarregamentoInicialDeDadosAleatorios {
 		ConjuntoSaboneteLiquido.cadastrarSaboneteLiquido(floratta);
 		
 		//Cliente
-		Cliente jonas = new Cliente("12388899970", "12345", "Jonas",
+		Cliente jonas = new Cliente("123456789", "12345", "Jonas",
 				"jonas@gmail.com", "61991231231", "Masculino");
 		ConjuntoCliente.cadastrarCliente(jonas);
 		Cliente maria = new Cliente("127312731238", "772312", "Maria",

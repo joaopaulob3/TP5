@@ -96,60 +96,60 @@ public class TelaLogin implements ActionListener {
 			//Se o login for validado, o sistema direciona para as telas a depender
 			//da opção que veio do TelaMenuProduto no Construtor de TelaLogin
 			if (cpf.equals("login") && senha.equals("login")) {
-				
-				//Oculta as janelas de Login e MenuProduto
+
+				//Oculta a TelaLogin e a TelaMenuProduto
 				this.getFrmTelaLogin().dispose();
 				this.getTelaMenu().dispose();
 				
 				//Chama a tela de cadastrar produto
-				if (this.getOpcao() == 1) {
-					new TelaCadastrarProduto(this.getTelaMenu());
-					
-				//Chama a tela de alteração de estoque de um produto
-				} else if (this.getOpcao() == 2) {
-					new TelaAlteracaoEstoque(this.getTelaMenu());
-					
-				//Chama a tela de edição de dados de um produto
-				} else if (this.getOpcao() == 3) {
-					new TelaEdicaoProduto(this.getTelaMenu());
-					
-				//Chama a tela de deleção de um produto
-				} else if (this.getOpcao() == 4) {
-					new TelaDelecaoProduto(this.getTelaMenu());
-					
-				//Chama a tela de editar informações de um cliente
-				} else if (this.getOpcao() == 5) {
-					//Se há clientes no sistema, eles serão listados
-					if (ConjuntoCliente.temCliente()) {
-						TelaListaClientes telaListaClientes = new TelaListaClientes(ConjuntoCliente.getListaClientes());
-						new TelaPesquisaPorCPF(telaListaClientes.getJanela() ,this.getTelaMenu(), 1);
-					} else {
-						JOptionPane.showMessageDialog(null, "Ainda não foi cadastrado nenhum cliente no sistema!", "", JOptionPane.INFORMATION_MESSAGE);
-						this.getTelaMenu().setVisible(true);
+					if (this.getOpcao() == 1) {
+						new TelaCadastrarProduto(this.getTelaMenu());
+						
+					//Chama a tela de alteração de estoque de um produto
+					} else if (this.getOpcao() == 2) {
+						new TelaAlteracaoEstoque(this.getTelaMenu());
+						
+					//Chama a tela de edição de dados de um produto
+					} else if (this.getOpcao() == 3) {
+						new TelaEdicaoProduto(this.getTelaMenu());
+						
+					//Chama a tela de deleção de um produto
+					} else if (this.getOpcao() == 4) {
+						new TelaDelecaoProduto(this.getTelaMenu());
+						
+					//Chama a tela de editar informações de um cliente
+					} else if (this.getOpcao() == 5) {
+						//Se há clientes no sistema, eles serão listados
+						if (ConjuntoCliente.temCliente()) {
+							TelaListaClientes telaListaClientes = new TelaListaClientes(ConjuntoCliente.getListaClientes());
+							new TelaPesquisaPorCPF(telaListaClientes.getJanela() ,this.getTelaMenu(), 1);
+						} else {
+							JOptionPane.showMessageDialog(null, "Ainda não foi cadastrado nenhum cliente no sistema!", "", JOptionPane.INFORMATION_MESSAGE);
+							this.getTelaMenu().setVisible(true);
+						}
+						
+					//Chama a tela de listar dados dos clientes	
+					} else if (this.getOpcao() == 6) {
+						//Se há clientes no sistema, eles serão listados
+						if (ConjuntoCliente.temCliente()) {
+							new TelaListaClientes(ConjuntoCliente.getListaClientes());
+							this.getTelaMenu().setVisible(true);
+						} else {
+							JOptionPane.showMessageDialog(null, "Ainda não foi cadastrado nenhum cliente no sistema!", "", JOptionPane.INFORMATION_MESSAGE);
+							this.getTelaMenu().setVisible(true);
+						}
+						
+					//Chama a tela de deleção de um cliente
+					} else if (this.getOpcao() == 7) {
+						//Se há clientes no sistema, eles serão listados
+						if (ConjuntoCliente.temCliente()) {
+							TelaListaClientes telaListaClientes = new TelaListaClientes(ConjuntoCliente.getListaClientes());
+							new TelaPesquisaPorCPF(telaListaClientes.getJanela() ,this.getTelaMenu(), 0);
+						} else {
+							JOptionPane.showMessageDialog(null, "Ainda não foi cadastrado nenhum cliente no sistema!", "", JOptionPane.INFORMATION_MESSAGE);
+							this.getTelaMenu().setVisible(true);
+						}
 					}
-					
-				//Chama a tela de listar dados dos clientes	
-				} else if (this.getOpcao() == 6) {
-					//Se há clientes no sistema, eles serão listados
-					if (ConjuntoCliente.temCliente()) {
-						new TelaListaClientes(ConjuntoCliente.getListaClientes());
-						this.getTelaMenu().setVisible(true);
-					} else {
-						JOptionPane.showMessageDialog(null, "Ainda não foi cadastrado nenhum cliente no sistema!", "", JOptionPane.INFORMATION_MESSAGE);
-						this.getTelaMenu().setVisible(true);
-					}
-					
-				//Chama a tela de deleção de um cliente
-				} else if (this.getOpcao() == 7) {
-					//Se há clientes no sistema, eles serão listados
-					if (ConjuntoCliente.temCliente()) {
-						TelaListaClientes telaListaClientes = new TelaListaClientes(ConjuntoCliente.getListaClientes());
-						new TelaPesquisaPorCPF(telaListaClientes.getJanela() ,this.getTelaMenu(), 0);
-					} else {
-						JOptionPane.showMessageDialog(null, "Ainda não foi cadastrado nenhum cliente no sistema!", "", JOptionPane.INFORMATION_MESSAGE);
-						this.getTelaMenu().setVisible(true);
-					}
-				}
 				
 			//Mensagem de erro se o Login não for validado	
 			} else {

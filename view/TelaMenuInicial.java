@@ -21,7 +21,7 @@ public class TelaMenuInicial implements ActionListener {
 	private JButton btnCliente = new JButton("Cliente");
 	private JButton btnCompra = new JButton("Compra");
 	
-	//Constutor iniciando a montagem dos componentes gráficos da tela inicial
+	//Construtor iniciando a montagem dos componentes gráficos da tela inicial
 	public TelaMenuInicial() {
 		//Configura os componentes da JFrame do Menu Inicial
 		this.frmMenuInicial.setBounds(100, 100, 698, 449);
@@ -104,23 +104,26 @@ public class TelaMenuInicial implements ActionListener {
 		//Armazena o botão escolhido
 		JButton botao = (JButton) e.getSource();
 		
-		//Oculta o menu inical
-		this.getFrmMenuInicial().dispose();
-		
 		//Inicia os eventos sobre o botão de Produto
 		if (botao == this.getBtnProduto()) {
+			//Oculta o menu inical
+			this.getFrmMenuInicial().dispose();
+			
 			new TelaMenuProduto(this.getFrmMenuInicial());
 		}
 		
 		
 		//Inicia os eventos sobre o botão Cliente
 		if (botao == this.getBtnCliente()) {
+			//Oculta o menu inical
+			this.getFrmMenuInicial().dispose();
+			
 			new TelaMenuCliente(this.getFrmMenuInicial());
 		}
 		
 		//Inicia os eventos sobre o botão Compra
 		if (botao == this.getBtnCompra()) {
-			
+			new TelaLoginCliente(this.getFrmMenuInicial());
 		}
 	}
 	
@@ -128,15 +131,19 @@ public class TelaMenuInicial implements ActionListener {
 	public JFrame getFrmMenuInicial() {
 		return this.frmMenuInicial;
 	}
+	
 	public JLabel getLblTituloInicial() {
 		return this.lblTituloInicial;
 	}
+	
 	public JButton getBtnProduto() {
 		return this.btnProduto;
 	}
+	
 	public JButton getBtnCliente() {
 		return this.btnCliente;
 	}
+	
 	public JButton getBtnCompra() {
 		return this.btnCompra;
 	}
