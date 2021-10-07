@@ -90,10 +90,10 @@ public class TelaLoginCliente implements ActionListener {
 			//Se o cliente for encontrado no sistema e o cpf e a senha estiverem
 			//corretos e atrelados a ele, podemos prosseguir
 			if (cliente != null) {
-				if (cpf.equals(cliente.getCpf()) && senha.equals(cliente.getSenha())) {
+				if (cpf.equals(cliente.getCPF()) && senha.equals(cliente.getSenha())) {
 					this.getFrmLogin().dispose();
 					this.getTelaMenuInicial().dispose();
-					new TelaCompra(this.getTelaMenuInicial());
+					new TelaCompra(this.getTelaMenuInicial(), cliente);
 				} 
 				//Mensagem de erro se o Login não for validado	
 				else {

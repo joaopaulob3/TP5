@@ -28,7 +28,7 @@ public class ConjuntoCliente {
 	//objeto, retorna null
 	public static Cliente pesquisarCliente(String cpf) {
 		for (Cliente cliente : listaClientes) {
-			if (cpf.equals(cliente.getCpf())) {
+			if (cpf.equals(cliente.getCPF())) {
 				return cliente;
 			}
 		}

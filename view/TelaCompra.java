@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import controller.*;
+import model.Cliente;
 
 public class TelaCompra implements ActionListener {
 	//Atributos
@@ -25,11 +26,13 @@ public class TelaCompra implements ActionListener {
 	private JButton btnSaboneteLiquido = new JButton("Sabonete L\u00EDquido");
 	private JButton btnVoltar = new JButton("Voltar");
 	private JFrame telaMenuInicial;
+	private Cliente cliente;
 	
 	//Construtor
-	public TelaCompra(JFrame telaMenuInicial) {
+	public TelaCompra(JFrame telaMenuInicial, Cliente cliente) {
 		//Configura os componentes da JFrame TelaCompra
 		this.telaMenuInicial = telaMenuInicial;
+		this.cliente = cliente;
 		this.frmCompra.setBounds(100, 100, 534, 451);
 		this.frmCompra.getContentPane().setLayout(null);
 		this.frmCompra.setResizable(false);
@@ -101,6 +104,9 @@ public class TelaCompra implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		//Declarações
+		int opcao;
+		
 		//Armazena o botão escolhido
 		JButton botao = (JButton) e.getSource();
 		
@@ -112,7 +118,9 @@ public class TelaCompra implements ActionListener {
 			
 			//Lista os perfumes existentes no sistema se houver
 			if (ConjuntoPerfumaria.temPerfume()) {
-				
+				opcao = 1;
+				TelaListaPerfume listaPerfume = new TelaListaPerfume(ConjuntoPerfumaria.getListaPerfumes());
+				new TelaPesquisaPorCodigo5(listaPerfume.getJanela() ,this.getFrmCompra(), opcao, this.getCliente());
 			} else {
 				JOptionPane.showMessageDialog(null, "Não há perfumes no sistema.", "", JOptionPane.WARNING_MESSAGE);
 				this.getFrmCompra().dispose();
@@ -122,27 +130,27 @@ public class TelaCompra implements ActionListener {
 		
 		//Inicia os eventos sobre a compra de hidratante
 		if (botao == this.getBtnHidratante()) {
-			new TelaCadastrarHidratante(this.getFrmCompra(), null);
+			
 		}
 		
 		//Inicia os eventos sobre a compra de protetor solar
 		if (botao == this.getBtnProtetorSolar()) {
-			new TelaCadastrarProtetorSolar(this.getFrmCompra(), null);
+			
 		}
 		
 		//Inicia os eventos sobre a compra de shampoo
 		if (botao == this.getBtnShampoo()) {
-			new TelaCadastrarShampoo(this.getFrmCompra(), null);
+			
 		}
 		
 		//Inicia os eventos sobre a compra de condicionador
 		if (botao == this.getBtnCondicionador()) {
-			new TelaCadastrarCondicionador(this.getFrmCompra(), null);
+			
 		}
 		
 		//Inicia os eventos sobre a compra de sabonete líquido
 		if (botao == this.getBtnSaboneteLiquido()) {
-			new TelaCadastrarSaboneteLiquido(this.getFrmCompra(), null);
+			
 		}
 		
 		//Inicia os eventos sobre o botão voltar
@@ -182,5 +190,7 @@ public class TelaCompra implements ActionListener {
 	public JFrame getTelaMenuInicial() {
 		return this.telaMenuInicial;
 	}
-	
+	public Cliente getCliente() {
+		return this.cliente;
+	}
 }

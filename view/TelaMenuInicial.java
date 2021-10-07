@@ -106,18 +106,14 @@ public class TelaMenuInicial implements ActionListener {
 		
 		//Inicia os eventos sobre o botão de Produto
 		if (botao == this.getBtnProduto()) {
-			//Oculta o menu inical
 			this.getFrmMenuInicial().dispose();
-			
 			new TelaMenuProduto(this.getFrmMenuInicial());
 		}
 		
 		
 		//Inicia os eventos sobre o botão Cliente
 		if (botao == this.getBtnCliente()) {
-			//Oculta o menu inical
 			this.getFrmMenuInicial().dispose();
-			
 			new TelaMenuCliente(this.getFrmMenuInicial());
 		}
 		

@@ -29,7 +29,7 @@ public class TelaListaClientes {
 		for (Cliente cliente : listaClientes) {
 			Object [] dados = {new String(Integer.toString(contador)), cliente.getNomeCliente(),
 					cliente.getEmailCliente(), cliente.getCelularCliente(), cliente.getGeneroCliente(),
-					cliente.getCpf()};
+					cliente.getCPF()};
 			tabelaModelo.addRow(dados);
 			contador++;
 		}

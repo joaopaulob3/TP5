@@ -1,7 +1,9 @@
 package model;
 
-public class Cliente extends Pessoa{
+public class Cliente {
 	//Atributos
+	private String cpf;
+	private String senha;
 	private String nomeCliente;
 	private String emailCliente;
 	private String celularCliente;
@@ -10,7 +12,8 @@ public class Cliente extends Pessoa{
 	//Construtor
 	public Cliente(String cpf, String senha, String nomeCliente, String emailCliente,
 			String celularCliente, String generoCliente) {
-		super(cpf, senha);
+		this.setCPFCliente(cpf);
+		this.setSenha(senha);
 		this.setNomeCliente(nomeCliente);
 		this.setEmailCliente(emailCliente);
 		this.setCelularCliente(celularCliente);
@@ -18,6 +21,12 @@ public class Cliente extends Pessoa{
 	}
 	
 	//Métodos modificadores
+	public void setCPFCliente(String cpf) {
+		this.cpf = cpf;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 	public void setNomeCliente(String nomeCliente) {
 		this.nomeCliente = nomeCliente;
 	}
@@ -32,17 +41,23 @@ public class Cliente extends Pessoa{
 	}
 	
 	//Métodos acessores
+	public String getCPF() {
+		return this.cpf;
+	}
+	public String getSenha() {
+		return this.senha;
+	}
 	public String getNomeCliente() {
-		return nomeCliente;
+		return this.nomeCliente;
 	}
 	public String getEmailCliente() {
-		return emailCliente;
+		return this.emailCliente;
 	}
 	public String getCelularCliente() {
-		return celularCliente;
+		return this.celularCliente;
 	}
 	public String getGeneroCliente() {
-		return generoCliente;
+		return this.generoCliente;
 	}
 
 }

@@ -28,7 +28,7 @@ public class ConjuntoCompra {
 		int contador = 0;
 		
 		for (Compra compra : listaCompras) {
-			if (cpf.equals(compra.getCliente().getCpf())) {
+			if (cpf.equals(compra.getCliente().getCPF())) {
 				++contador;
 			}
 		}
