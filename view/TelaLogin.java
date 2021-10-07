@@ -1,5 +1,14 @@
 package view;
 
+/**
+ * Apresenta a tela de login do administrador do sistema para poder realizar ações 
+ * como cadastrar algum produto, alterar o estoque de algum produto, editar os dados de
+ * algum produto, deletar algum produto, editar dados de algum cliente, listar os dados
+ * dos clientes e deletar algum cliente
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

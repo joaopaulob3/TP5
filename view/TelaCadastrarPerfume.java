@@ -1,5 +1,13 @@
 package view;
 
+/**
+ * Apresenta a tela de cadastro de perfume com os campos de preço,
+ * volume, código, marca, linha, quantidade em estoque, categoria,
+ * propriedades, família olfativa e subfamília olfativa
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

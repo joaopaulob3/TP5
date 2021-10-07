@@ -1,5 +1,11 @@
 package view;
 
+/**
+ * Apresenta a tela de login do cliente para poder realizar alguma compra
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,5 +1,11 @@
 package view;
 
+/**
+ * Apresenta a tela de compra de um dos 6 produtos
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

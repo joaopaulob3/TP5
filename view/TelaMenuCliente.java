@@ -1,5 +1,15 @@
 package view;
 
+/**
+ * Apresenta a tela de menu do cliente com as opções de cadastrar um
+ * cliente, editar informações de um cliente, listar dados dos clientes,
+ * deletar um cliente e voltar. Nesse menu, apenas a opção de cadastrar
+ * um cliente está disponível ao cliente, as outras estão restritas ao
+ * administrador do sistema
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -77,9 +87,6 @@ public class TelaMenuCliente implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//Declarações
-		int opcao;
-		
 		//Armazena o botão escolhido
 		JButton botao = (JButton) e.getSource();
 		

@@ -1,5 +1,11 @@
 package view;
 
+/**
+ * Apresenta a tela de listagem dos protetores solar armazenados no ArrayList
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.GridLayout;
 import java.util.ArrayList;
 

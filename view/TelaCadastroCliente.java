@@ -1,5 +1,12 @@
 package view;
 
+/**
+ * Apresenta a tela de cadastro do cliente com os campos de nome,
+ * e-mail, cpf, celular, gênero e senha
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

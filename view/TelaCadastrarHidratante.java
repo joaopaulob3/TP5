@@ -1,5 +1,12 @@
 package view;
 
+/**
+ * Apresenta a tela de cadastro de hidratante com os campos de preço,
+ * volume, código, marca, linha, quantidade em estoque e tipo de pele
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

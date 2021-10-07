@@ -1,5 +1,13 @@
 package view;
 
+/**
+ * Apresenta a tela de cadastro de condicionador com os campos de preço,
+ * volume, código, marca, linha, quantidade em estoque, tipo de cabelo,
+ * propriedades e condição dos fios
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

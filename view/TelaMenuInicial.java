@@ -1,5 +1,12 @@
 package view;
 
+/**
+ * Apresenta a tela do menu inicial com as oções de Produto,
+ * Cliente e Compra 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

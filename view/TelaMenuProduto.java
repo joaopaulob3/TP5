@@ -1,5 +1,15 @@
 package view;
 
+/**
+ * Apresenta a tela de menu do produto com as opções de cadastrar um
+ * produto, aumentar ou diminuir estoque de um produto, editar informações 
+ * de um produto, listar dados dos produtos, deletar um produto e voltar. 
+ * Nesse menu, apenas a opção de listar dados dos produtos está disponível 
+ * ao cliente, as outras estão restritas ao administrador do sistema
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

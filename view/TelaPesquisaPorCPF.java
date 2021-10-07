@@ -1,5 +1,13 @@
 package view;
 
+/**
+ * Apresenta a tela de pesquisa de um cliente pelo CPF e 
+ * deleta ou edita os dados desse cliente a depender da
+ * opção da classe que chamou essa
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

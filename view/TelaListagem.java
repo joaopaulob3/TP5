@@ -1,4 +1,11 @@
 package view;
+
+/**
+ * Apresenta a tela de listagem dos 6 produtos
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +16,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
 import controller.*;
+
 public class TelaListagem implements ActionListener {
 	//Atributos
 	private JFrame frmListagem = new JFrame("Listagem de dados");

@@ -1,5 +1,12 @@
 package view;
 
+/**
+ * Apresenta a tela que pede a quantidade do produto que o administrador
+ * do sistema deseja alterar
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
