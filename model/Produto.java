@@ -1,5 +1,13 @@
 package model;
 
+/**
+ * Classe modelo para objetos do tipo Produto (classe mãe) que possuem preço, volume,
+ * código, marca, linha e quantidade.
+ * 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 public abstract class Produto {
 	//Atributos
 	private double precoDoProduto;

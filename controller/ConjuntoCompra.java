@@ -4,25 +4,49 @@ import java.util.ArrayList;
 
 import model.*;
 
+/**
+ * Armazena o ArrayList de objetos do tipo Compra, adiciona o objeto do tipo Compra no ArrayList,
+ * deleta o objeto do tipo Compra do ArrayList, pesquisa o objeto do tipo Compra no ArrayList e
+ * verifica se há objetos do tipo Compra no ArrayList
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 public class ConjuntoCompra {
 	//Criação do ArrayList contendo objetos do tipo Compra (com Cliente e Produto)
 	private static final ArrayList<Compra> listaCompras = new ArrayList<>();
 	
+	/**
+	 * Cadastra (armazena) o objeto do tipo Compra no ArrayList
+	 * @param objeto compra que será armazenado no ArrayList
+	 */
 	//Cadastro de uma compra
 	public static void cadastrarCompra(Compra compra) {
 		listaCompras.add(compra);
 	}
 	
+	/**
+	 * Deleta (retira) o objeto do tipo Compra no ArrayList
+	 * @param objeto compra que será retirado do ArrayList
+	 */
 	//Deleção de uma compra
 	public static void deletarCompra(Compra compra) {
 		listaCompras.remove(compra);
 	}
 	
+	/**
+	 * @return inteiro relativo à quantidade de objetos compra no ArrayList
+	 */
 	//Retorna a quantidade de objetos do tipo Compra dentro do ArrayList
 	public static int quantidade() {
 		return listaCompras.size();
 	}
 	
+	/**
+	 * @param String que será pesquisada no ArrayList
+	 * @return inteiro relativo à quantidade de objetos compra que um cliente
+	 * específico fez do ArrayList
+	 */
 	//Retorna a quantidade de compras que um cliente específico fez
 	public static int quantidade(String cpf) {
 		int contador = 0;
@@ -36,6 +60,10 @@ public class ConjuntoCompra {
 		return contador;
 	}
 	
+	/**
+	 * Verifica se há objetos do tipo Compra no ArrayList
+	 * @return verdadeiro ou falso a depender do método isEmpty() do ArrayList
+	 */
 	//Se o ArrayList estiver vazio retorna false, senão retorna true
 	public static boolean temCompra() {
 		if (listaCompras.isEmpty()) {

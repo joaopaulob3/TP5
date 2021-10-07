@@ -1,5 +1,13 @@
 package model;
 
+/**
+ * Classe modelo para objetos do tipo Cliente que possuem CPF, senha, nome, email,
+ * celular e gênero.
+ * 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 public class Cliente {
 	//Atributos
 	private String cpf;

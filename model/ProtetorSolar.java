@@ -1,5 +1,13 @@
 package model;
 
+/**
+ * Classe modelo para objetos do tipo ProtetorSolar que possuem preço, volume, código,
+ * marca, linha, quantidade, propriedades e FPS.
+ * 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 public class ProtetorSolar extends Produto{
 	//Atributos
 	private String propriedadesDoProtetorSolar;

@@ -1,5 +1,13 @@
 package model;
 
+/**
+ * Classe modelo para objetos do tipo Perfumaria que possuem preço, volume, codigo, marca,
+ * linha, quantidade, categoria, propriedades, familia olfativa e subfamília olfativa
+ * 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 public class Perfumaria extends Produto{
 	//Atributos
 	private String categoriaDoPerfume;

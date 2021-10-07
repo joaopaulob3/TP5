@@ -1,5 +1,15 @@
 package model;
 
+/**
+ * Cria 2 objetos de cada tipo de Produto com seus respectivos dados e os armazena
+ * em seus respectivos ArrayLists. Os 6 tipos de produto são: Perfumaria, Hidratante,
+ * ProtetorSolar, Shampoo, Condicionador e SaboneteLiquido. Além disso, a classe também
+ * cria 2 objetos do tipo Cliente e os armazena em seu respectivo ArrayList. 
+ * 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 import controller.*;
 
 public class CarregamentoInicialDeDadosAleatorios {

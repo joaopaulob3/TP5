@@ -1,5 +1,13 @@
 package model;
 
+/**
+ * Classe modelo para objetos do tipo Shampoo que possuem preço, volume, código,
+ * marca, linha, quantidade, tipo de cabelo, propriedades e condição dos fios.
+ * 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 public class Shampoo extends Produto{
 	//Atributos
 	private String tipoDeCabeloDoShampoo;

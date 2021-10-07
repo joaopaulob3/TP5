@@ -1,5 +1,13 @@
 package model;
 
+/**
+ * Classe modelo para objetos do tipo Compra que possuem Cliente, Produto, valor da compra e
+ * quantidade comprada.
+ * 
+ * @author João Paulo da Silva Freitas
+ * @version 1.0
+ */
+
 public class Compra {
 	//Atributos
 	private Cliente cliente;
